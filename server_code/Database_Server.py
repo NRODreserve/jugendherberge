@@ -15,15 +15,13 @@ import sqlite3
 #
 @anvil.server.callable
 def say_hello(name):
-   print("Hello, " + name + "!")
-   return 42
-
+  print("Hello, " + name + "!")
+  return 42
 
 @anvil.server.callable
-def get_jugendherbergen(rows = "*"):
+def get_jugendherbergen(rows="*"):
   conn = sqlite3.connect(data_files['jugendherbergen_verwaltung.db'])
   cursor = conn.cursor()
   res = list(cursor.execute(f"SELECT {rows} FROM jugendherbergen"))
   print(res)
   return res
- 
