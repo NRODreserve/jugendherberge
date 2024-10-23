@@ -14,7 +14,7 @@ class Form1(Form1Template):
     # Any code you write here will run before the form opens.
 
     self.drop_down_1.items = [("Satteins", 0), ("Mordor", 1)]
-    print(anvil.server.call("say_hello", "sauron"))
+    
     print(anvil.server.call("get_jugendherbergen"))
 
     self.drop_down_1.items = anvil.server.call('get_jugendherbergen', "name, JID")
