@@ -19,5 +19,5 @@ class Form1(Form1Template):
     print(anvil.server.call("get_preiskategorie_for_jugendherbergen"))
     self.drop_down_2.items = anvil.server.call('get_preiskategorie_for_jugendherbergen', "name, PID")
 
-    #print(anvil.server.call("get_zimmer_for_jugendherbergen"))
-    #self.drop_down_2.items = anvil.server.call('get_zimmer_for_jugendherbergen', "schlafplätze, ZID, JID")
+    print(anvil.server.call("get_zimmer_for_jugendherbergen"))
+    self.drop_down_3.items = anvil.server.call('get_zimmer_for_jugendherbergen', "zimmernummer, bettenanzahl, preis_pro_nacht, gebucht, JID, ZID")
