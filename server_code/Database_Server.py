@@ -23,6 +23,15 @@ def get_jugendherbergen(rows="*"):
   print(res)
   return res
 
+@anvil.server.callable
+def get_preiskategorie_for_jugendherbergen(rows="*"):
+  conn = sqlite3.connect(data_files['jugendherbergen_verwaltung.db'])
+  cursor = conn.cursor()
+  res = list(cursor.execute(f"SELECT {rows} FROM preiskategorie"))
+  print(res)
+  return res
+
+@anvil.server.callable
 def get_zimmer_for_jugendherbergen(rows="*"):
   conn = sqlite3.connect(data_files['jugendherbergen_verwaltung.db'])
   cursor = conn.cursor()
