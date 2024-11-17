@@ -24,27 +24,40 @@ components:
     name: drop_down_3
     properties: {}
     type: DropDown
+  - layout_properties: {grid_position: 'QXGTBL,IATROT'}
+    name: label_6
+    properties: {text: Einchecken}
+    type: Label
+  - layout_properties: {grid_position: 'DSQPVL,JBAYFA'}
+    name: date_picker_1
+    properties: {}
+    type: DatePicker
+  - layout_properties: {grid_position: 'DTBMXM,FHUQUA'}
+    name: label_7
+    properties: {text: Auschecken}
+    type: Label
+  - layout_properties: {grid_position: 'QKSXSJ,WWIEBD'}
+    name: date_picker_2
+    properties: {}
+    type: DatePicker
   - layout_properties: {grid_position: 'FCUCSE,QHEXQH'}
     name: button_1
     properties: {text: Buchen}
     type: Button
-  - components:
-    - name: repeating_panel_1
-      properties: {item_template: Form1.RowTemplate1}
-      type: RepeatingPanel
-    layout_properties: {grid_position: 'GTLUDI,HAHFKK'}
-    name: data_grid_1
-    properties:
-      columns:
-      - {data_key: column_1, id: JKSDUP, title: Jugendherbergen}
-      - {data_key: column_2, id: VJQQOR, title: Preiskategorie}
-      - {data_key: column_3, id: OJLQEN, title: Zimmer}
-    type: DataGrid
+  - layout_properties: {grid_position: 'IWZAKT,GWEVAY'}
+    name: label_5
+    properties: {text: Buchungen}
+    type: Label
+  - layout_properties: {grid_position: 'ZWDMGX,BFFLYM'}
+    name: drop_down_4
+    properties: {}
+    type: DropDown
   layout_properties: {slot: default}
   name: content_panel
   properties: {col_widths: '{}'}
   type: ColumnPanel
-- layout_properties: {slot: nav-right}
+- components: []
+  layout_properties: {slot: nav-right}
   name: navbar_links
   properties: {}
   type: FlowPanel
