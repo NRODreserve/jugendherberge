@@ -46,7 +46,7 @@ def get_buchungen(rows="*"):
   return res
 
 @anvil.server.callable
-def add_buchung(jugendherberge, preiskategorie, zimmer, start_datum, end_datum, weitere_user):
+def add_buchung(jugendherberge, preiskategorie, zimmer, start_datum, end_datum):
     
     conn = sqlite3.connect('jugendherbergen_verwaltung.db')
     cursor = conn.cursor()
@@ -54,16 +54,8 @@ def add_buchung(jugendherberge, preiskategorie, zimmer, start_datum, end_datum, 
     cursor.execute('''
         INSERT INTO buchungen (zimmernummer, PID, check_in_date, check_out_date, customer_name)
         VALUES (?, ?, ?, ?, ?)
-    ''', (zimmer, preiskategorie, start_datum, end_datum, "Du",))
+    ''', (zimmer, preiskategorie, start_datum, end_datum, "Gast",))
 
-    neue_buchung_id = cursor.lastrowid
-  
-    for user in weitere_user:
-      cursor.execute('''
-        INSERT INTO buchungMit (BID, customer_name)
-        VALUES (?, ?)
-    ''', (neue_buchung_id, user,))
-      
     cursor.execute("UPDATE zimmer SET gebucht = 1 WHERE zimmernummer = ?", (zimmer,))
     
     conn.commit()

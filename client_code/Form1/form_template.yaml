@@ -4,7 +4,8 @@ components:
     name: label_2
     properties: {text: 'Jugendherbergen:'}
     type: Label
-  - layout_properties: {grid_position: 'UFDEWC,YDVVAY'}
+  - event_bindings: {change: drop_down_1_change}
+    layout_properties: {grid_position: 'UFDEWC,YDVVAY'}
     name: drop_down_1
     properties: {align: full}
     type: DropDown
@@ -12,7 +13,8 @@ components:
     name: label_3
     properties: {text: 'Preiskategorie:'}
     type: Label
-  - layout_properties: {grid_position: 'SMSKIM,AJBPYL'}
+  - event_bindings: {change: drop_down_2_change}
+    layout_properties: {grid_position: 'SMSKIM,AJBPYL'}
     name: drop_down_2
     properties: {}
     type: DropDown
@@ -28,7 +30,8 @@ components:
     name: label_6
     properties: {text: Einchecken}
     type: Label
-  - layout_properties: {grid_position: 'DSQPVL,JBAYFA'}
+  - event_bindings: {change: date_picker_1_change}
+    layout_properties: {grid_position: 'DSQPVL,JBAYFA'}
     name: date_picker_1
     properties: {}
     type: DatePicker
@@ -36,11 +39,13 @@ components:
     name: label_7
     properties: {text: Auschecken}
     type: Label
-  - layout_properties: {grid_position: 'QKSXSJ,WWIEBD'}
+  - event_bindings: {change: date_picker_2_change}
+    layout_properties: {grid_position: 'QKSXSJ,WWIEBD'}
     name: date_picker_2
     properties: {}
     type: DatePicker
-  - layout_properties: {grid_position: 'FCUCSE,QHEXQH'}
+  - event_bindings: {click: button_1_click}
+    layout_properties: {grid_position: 'FCUCSE,QHEXQH'}
     name: button_1
     properties: {text: Buchen}
     type: Button
@@ -48,7 +53,8 @@ components:
     name: label_5
     properties: {text: Buchungen}
     type: Label
-  - layout_properties: {grid_position: 'ZWDMGX,BFFLYM'}
+  - event_bindings: {change: drop_down_4_change}
+    layout_properties: {grid_position: 'ZWDMGX,BFFLYM'}
     name: drop_down_4
     properties: {}
     type: DropDown
